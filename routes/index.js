@@ -14,6 +14,7 @@ router.post('/roll', function(req, res) {
       {
         color: "good",
         text: "@" + req.body.user_name + " rolled *100*",
+        mrkdwn: true,
         fields: [
           {
             title: "Dice",
