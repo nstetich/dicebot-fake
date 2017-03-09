@@ -9,10 +9,11 @@ router.get('/', function(req, res) {
 router.post('/roll', function(req, res) {
   console.log(req.body);
   res.status(200).json({
+    response_type: "in_channel",
     attachments: [
       {
         color: "good",
-        title: "@" + req.body.user_name + " rolled *100*",
+        text: "@" + req.body.user_name + " rolled *100*",
         fields: [
           {
             title: "Dice",
